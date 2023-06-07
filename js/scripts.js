@@ -26,17 +26,31 @@
 
 // using a loop to sum numbers
 
-const array = [0,1,2,3,4,5];
-let sum = 0;
-let oldSum;
-let newSum;
-array.forEach(function(numberToAdd) {
-    debugger;
-    oldSum = sum;
-    sum = oldSum + numberToAdd;
-    newSum = sum;
-});
+// const array = [0,1,2,3,4,5];
+// let sum = 0;
+// let oldSum;
+// let newSum;
+// array.forEach(function(numberToAdd) {
+//     oldSum = sum;
+//     sum = oldSum + numberToAdd;
+//     newSum = sum;
+// });
 
+function countTo(targetNumber, multiple) {
+    const resultDiv = document.getElementById("result");
+    resultDiv.innerHTML = "";
+
+    for (let i =1; i <= targetNumber; i++) {
+        if (i % multiple === 0) {
+            console.log(i);
+        }
+    }
+}
+
+const targetNumber = a;
+const multiple = b;
+
+countTo(targetNumber, multiple);
 
   // User Interface Logic
   function handleCalculation(event) {
@@ -57,3 +71,5 @@ array.forEach(function(numberToAdd) {
     const form = document.getElementById("calculator");
     form.addEventListener("submit", handleCalculation);
   });
+
+  
