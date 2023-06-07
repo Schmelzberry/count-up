@@ -16,6 +16,26 @@
 //     doubledArray.push(array[index] * 2);
 //   }
   
+// for loop
+
+// let total = 0;
+// const summands = [1,2,3,4,5];
+// for (let index = 0; index < summands.length; index +=1) {
+//     total += summands[index];
+//     }
+
+// using a loop to sum numbers
+
+const array = [0,1,2,3,4,5];
+let sum = 0;
+let oldSum;
+let newSum;
+array.forEach(function(numberToAdd) {
+    debugger;
+    oldSum = sum;
+    sum = oldSum + numberToAdd;
+    newSum = sum;
+});
 
 
   // User Interface Logic
@@ -25,16 +45,7 @@
     const number2 = parseInt(document.querySelector("input#input2").value);
     const operator = document.querySelector("input[name='operator']:checked").value;
 
-    let result;
-    if (operator === "add") {
-      result = add(number1, number2);
-    } else if (operator === "subtract") {
-      result = subtract(number1, number2);
-    } else if (operator === "multiply") {
-      result = multiply(number1, number2);
-    } else if (operator === "divide") {
-      result = divide(number1, number2);
-    }
+ 
   
     document.getElementById("output").innerText =result;
     
